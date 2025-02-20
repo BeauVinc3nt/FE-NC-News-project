@@ -1,4 +1,4 @@
-const symbols = {
+export const symbols = {
   upvote: "⬆",
   downvote: "⬇",
   addComment: "🖊️",
@@ -6,4 +6,3 @@ const symbols = {
   emptyArticlesMsg: "📚",
 };
 
-module.exports = { symbols };

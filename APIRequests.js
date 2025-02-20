@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "https://fe-nc-reddit-clone.onrender.com/api";
+export const baseURL = "https://fe-nc-reddit-clone.onrender.com/api";
 
 export const getArticles = () => {
   return axios.get(`${baseURL}/articles`).then(({ data }) => {

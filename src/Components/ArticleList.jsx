@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { getArticles } from "../../APIRequests";
+import ArticleCard from "./ArticleCard";
 
 function ArticleList() {
   // Setting states
@@ -23,11 +24,11 @@ function ArticleList() {
 
   return (
     <ul className="article-list">
+      <h2> All articles: </h2>
       {articles.map((article) => (
         // Linking specific article to a parametric endpoint
         <Link to={"/articles/" + article.article_id} key={article.article_id}>
-          <li className="articleTitleLink">{article.title}</li>
-        
+          <ArticleCard article={article} />
           {/* Replace this li element with article card component and pass each article as a prop */}
         </Link>
       ))}
@@ -36,3 +37,4 @@ function ArticleList() {
 }
 
 export default ArticleList;
+// return <ArticleCard key={article} article={article} />

@@ -1,25 +1,14 @@
 import { useState } from "react";
+import { symbols } from "../assets/symbols";
+import ViewAllArticles from "../Components/ViewAllArticles";
 
 export default function Home() {
-  const [voteCount, setVoteCount] = useState(0); // Initializing vote count to 0 on app load.
-
   return (
     <>
-      <div className="card">
-        <div className="voteSection">
-          Votes: {voteCount}
-          <div className="upvoteBox">
-            <button onClick={() => setVoteCount((voteCount) => voteCount + 1)}>
-              ⬆
-            </button>
-          </div>
-          <div className="downvoteBox">
-            <button onClick={() => setVoteCount((voteCount) => voteCount - 1)}>
-              ⬇
-            </button>
-          </div>
-        </div>
-      </div>
+      <p> Welcome to BeauNews!</p>
+      <p> It's quiet around here {symbols.emptyArticlesMsg}</p>
+      <p> We have loads of articles for you to search!</p>
+      <ViewAllArticles />
     </>
   );
 }
