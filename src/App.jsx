@@ -1,22 +1,22 @@
 import { useState } from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import ArticleList from "./Components/ArticleList.jsx";
+import Article from "./Pages/Article.jsx";
+import Header from "./Components/Header.jsx";
 
 function App() {
-  const [voteCount, setVoteCount] = useState(0); // Initializing vote count to 0 on app load.
-  const [loggedInUser, setLoggedInUser] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); // Setting current page to home.
+  const [loggedInUser, setLoggedInUser] = useState("tickle122"); // Setting to an existing user in the db, or use 'null'
 
   return (
     <>
-      <div className="card">
-        <h1>BeauNews 💬 </h1>
-
-        <div className="upvoteBox">
-          <button onClick={() => setVoteCount((voteCount) => voteCount + 1)}>
-            ⬆ {voteCount}
-          </button>
-        </div>
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/articles" element={<ArticleList />}></Route>
+        <Route path="/articles/:article_id" element={<Article />}></Route>
+      </Routes>
     </>
   );
 }
