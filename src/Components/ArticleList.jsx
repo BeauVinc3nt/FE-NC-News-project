@@ -37,7 +37,7 @@ function ArticleList() {
 
       {articles.map((article) => (
         <Link to={`/articles/${article.article_id}`} key={article.article_id}>
-          <ArticleCard article={article} />
+          <ArticleCard article={article} /> {/* Sending article via props*/}
         </Link>
       ))}
     </ul>

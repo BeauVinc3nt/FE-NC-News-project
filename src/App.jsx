@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./Pages/HomePage.jsx";
 import ArticleList from "./Components/ArticleList.jsx";
-import Article from "./Pages/Article.jsx";
+import Article from "./Pages/ArticlePage.jsx";
 import Header from "./Components/Header.jsx";
 import ArticleCommentsPage from "./Pages/ArticleCommentsPage.jsx";
 

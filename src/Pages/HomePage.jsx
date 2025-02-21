@@ -12,5 +12,3 @@ export default function Home() {
     </>
   );
 }
-
-// Solve why /api isn't loading to home. Moved div card section from 'app.jsx' => 'home'
