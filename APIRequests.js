@@ -13,3 +13,11 @@ export const getSingleArticle = (article_id) => {
     return data.article;
   });
 };
+
+export const getCommentsByArticleID = (article_id) => {
+  return axios
+    .get(`${baseURL}/articles/${article_id}/comments`)
+    .then(({ data }) => {
+      return data.article;
+    });
+};
