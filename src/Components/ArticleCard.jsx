@@ -13,7 +13,7 @@ export default function ArticleCard({ article }) {
           </p>
           <p className="articleDesc"> {article.body} </p>
           <p className="articleCommentCount">
-            Comment count: {article.comment_count}
+            Comments: {article.comment_count}
           </p>
           <img
             className="articleImages"

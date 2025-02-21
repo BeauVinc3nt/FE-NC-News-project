@@ -1,14 +1,16 @@
+// Default state of working article.jsx page
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleArticle } from "../../APIRequests";
 import ViewAllArticles from "../Components/ViewAllArticles";
 import moment from "moment";
+import ViewArticleComments from "../Components/ViewArticleComments";
 
 export default function Article() {
   const [article, setArticle] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [voteCount, setVoteCount] = useState(0);
+  const [voteCount, setVoteCount] = useState([]);
 
   const { article_id } = useParams(); // Accessing parameters from route
 
@@ -41,7 +43,7 @@ export default function Article() {
 
         <div>
           <p className="articleAuthor">
-            Posted by {article.author} on{" "}
+            Posted by {article.author} on
             {moment(article.created_at).calendar()}
           </p>
         </div>
@@ -79,8 +81,9 @@ export default function Article() {
 
         <section>
           <p>{article.comment_count} comments</p>
+          {/* Button navigating to article's comment section page */}
+          <ViewArticleComments />
         </section>
-        {/* COMMENT SECTION GOES HERE */}
       </div>
     </>
   );
