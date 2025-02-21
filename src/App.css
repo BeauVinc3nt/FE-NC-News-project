@@ -8,22 +8,6 @@
   background-color: black;
   display: flex;
 }
-.upvoteBox button {
-  display: flex;
-}
-.downvoteBox button {
-  display: flex;
-}
-
-.upvoteBox button:hover {
-  background-color: green;
-  transition: transform 0.3s;
-}
-
-.downvoteBox button:hover {
-  background-color: red;
-  transition: transform 0.3s;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -31,10 +15,67 @@
   }
 }
 
-.card {
-  padding: 2em;
+.subRedditText {
+  padding: 1%;
+  color: blue;
+  transition: all 0.25s ease-in-out;
+}
+
+/* When hovering over container => modify subRedditText class */
+.container:hover .subRedditText {
+  color: white;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.BeauNewsHomeLink {
+  font-size: calc(0.5em + 2.5vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 2%;
+}
+
+.container {
+  text-align: center;
+  border: 1vw solid black;
+  background-color: white;
+  padding: 1%;
+  margin: 4%;
+  transition: all 0.25s ease-in-out;
+}
+
+.container:hover {
+  background-color: black;
+}
+
+.articleImages {
+  width: 50%;
+  padding: 4%;
+}
+
+.upvoteBTN {
+  transition: transform 5s;
+}
+
+.downvoteBTN {
+  transition: transform 5s;
+}
+.upvoteBTN:hover {
+  background-color: green;
+}
+
+.downvoteBTN:hover {
+  background-color: red;
+}
+
+.articleTitle {
+  font-weight: 1000;
+}
+
+.articleAuthor {
+  font-style: italic;
 }
