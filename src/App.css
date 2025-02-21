@@ -8,22 +8,6 @@
   background-color: black;
   display: flex;
 }
-.upvoteBox button {
-  display: flex;
-}
-.downvoteBox button {
-  display: flex;
-}
-
-.upvoteBox button:hover {
-  background-color: green;
-  transition: transform 0.3s;
-}
-
-.downvoteBox button:hover {
-  background-color: red;
-  transition: transform 0.3s;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -31,7 +15,16 @@
   }
 }
 
+.subRedditText {
+  padding: 1%;
+  color: blue;
+  transition: all 0.25s ease-in-out;
+}
 
+/* When hovering over container => modify subRedditText class */
+.container:hover .subRedditText {
+  color: white;
+}
 
 .read-the-docs {
   color: #888;
@@ -62,4 +55,27 @@
 .articleImages {
   width: 50%;
   padding: 4%;
+}
+
+.upvoteBTN {
+  transition: transform 5s;
+}
+
+.downvoteBTN {
+  transition: transform 5s;
+}
+.upvoteBTN:hover {
+  background-color: green;
+}
+
+.downvoteBTN:hover {
+  background-color: red;
+}
+
+.articleTitle {
+  font-weight: 1000;
+}
+
+.articleAuthor {
+  font-style: italic;
 }

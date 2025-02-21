@@ -3,6 +3,7 @@ import moment from "moment"; // Used to manipulate time format from JSON time ob
 export default function ArticleCard({ article }) {
   return (
     <div key={article.article_id} className="container">
+      <p class="subRedditText">r/{article.topic}</p> {/* Sub reddit format*/}
       <div className="articleInfo">
         <ul>
           <p className="articleTitle"> {article.title} </p>

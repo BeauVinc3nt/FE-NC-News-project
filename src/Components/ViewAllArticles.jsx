@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { baseURL } from "../../APIRequests";
 
 export default function ViewAllArticles() {
   return (
