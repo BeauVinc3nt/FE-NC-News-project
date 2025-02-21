@@ -4,5 +4,5 @@ export const symbols = {
   addComment: "🖊️",
   postComment: "💬",
   emptyArticlesMsg: "📚",
+  emptyComments: "⊹ ࣪ ˖",
 };
-

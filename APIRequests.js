@@ -18,6 +18,16 @@ export const getCommentsByArticleID = (article_id) => {
   return axios
     .get(`${baseURL}/articles/${article_id}/comments`)
     .then(({ data }) => {
-      return data.article;
+      // console.log("Api response", data);
+      return data.comments;
     });
+};
+
+export const createCommentOnArticle = (article_id) => {
+  return (
+    axios.post(`${baseURL}/articles/${article_id}/comments`),
+    then(({ data }) => {
+      return data.article;
+    })
+  );
 };
