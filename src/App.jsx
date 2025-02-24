@@ -27,3 +27,6 @@ function App() {
 }
 
 export default App;
+
+// Sprint link: https://l2c.northcoders.com/courses/fe/fe-nc-news#sectionId=Deploy_app,step=intro
+// FINISH TASKS + HOST SITE

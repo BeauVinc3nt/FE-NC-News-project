@@ -4,6 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+
+#root {
+  display: grid;
+  place-items: center; /* Centers  horizontally + vertically */
+  text-align: center;
+}
+
 .card {
   background-color: black;
   display: flex;
@@ -21,11 +28,6 @@
   transition: all 0.25s ease-in-out;
 }
 
-/* When hovering over container => modify subRedditText class */
-.container:hover .subRedditText {
-  color: white;
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -40,12 +42,18 @@
 }
 
 .container {
+  display: flex;
   text-align: center;
   border: 1vw solid black;
   background-color: white;
   padding: 1%;
   margin: 4%;
   transition: all 0.25s ease-in-out;
+}
+
+/* When hovering over container => modify subRedditText class */
+.container:hover .subRedditText {
+  color: white;
 }
 
 .container:hover {
@@ -55,6 +63,40 @@
 .articleImages {
   width: 50%;
   padding: 4%;
+}
+
+.articleTitle {
+  font-weight: 1000;
+}
+
+.articleAuthor {
+  font-style: italic;
+}
+
+/* Loader component's CSS*/
+.LoadingWindow {
+  display: flex;
+  flex-direction: column; /* column direction to stack loading msg + icon */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loader {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-top: 1vw solid #fff;
+  border-left: 1vw solid #fff;
+  border-right: 1vw solid #ff00;
+  animation: loader 0.3s infinite linear;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .upvoteBTN {
@@ -72,10 +114,25 @@
   background-color: red;
 }
 
-.articleTitle {
-  font-weight: 1000;
+.voteSection {
+  background-color: grey;
+  padding: 30px;
+  border-radius: min(10px + 5%);
 }
 
-.articleAuthor {
-  font-style: italic;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.articleTitleLink {
+  list-style: none;
 }
