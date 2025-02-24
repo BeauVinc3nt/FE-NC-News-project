@@ -5,6 +5,7 @@ import { getSingleArticle } from "../../APIRequests";
 import ViewAllArticles from "../Components/ViewAllArticles";
 import moment from "moment";
 import ViewArticleComments from "../Components/ViewArticleComments";
+import Loader from "../Components/Loader";
 
 export default function Article() {
   const [article, setArticle] = useState(null);
@@ -30,7 +31,13 @@ export default function Article() {
       });
   }, [article_id]);
 
-  if (isLoading) return <p>Loading article...</p>;
+  if (isLoading)
+    return (
+      <div className="LoadingWindow">
+        <p>Loading article...</p>
+        <Loader />
+      </div>
+    );
   if (error) return <p>{error}</p>;
   if (!article) return <p>Article not found</p>;
 

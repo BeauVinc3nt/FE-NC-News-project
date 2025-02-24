@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import CommentCard from "../Components/CommentCard";
 import { getCommentsByArticleID } from "../../APIRequests";
 import ArticleCard from "../Components/ArticleCard";
+import Loader from "../Components/Loader";
 import { symbols } from "../assets/symbols";
 
 export default function ArticleCommentsPage() {
@@ -28,7 +29,15 @@ export default function ArticleCommentsPage() {
       });
   }, [article_id]);
 
-  if (isLoading) return <p>Loading comments...</p>;
+  if (isLoading)
+    return (
+      <div className="LoadingWindow">
+        {/* Container to ensure consistent */}
+        <p>Loading comments...</p>
+        <Loader />
+      </div>
+    );
+
   if (error) return <p> {error} </p>;
   if (!comments)
     return (

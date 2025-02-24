@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getArticles } from "../../APIRequests";
 import ArticleCard from "./ArticleCard";
+import Loader from "./Loader";
 
 function ArticleList() {
   // Setting states
@@ -25,7 +26,13 @@ function ArticleList() {
   }, []);
 
   if (isLoading) {
-    return <p> Loading articles ... </p>;
+    return (
+      <div className="LoadingWindow">
+        {/* Container to ensure consistent */}
+        <p> Loading articles ... </p>
+        <Loader />
+      </div>
+    );
   }
   if (err) {
     return <p> {err} </p>;
