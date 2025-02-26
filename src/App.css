@@ -34,11 +34,13 @@
 
 .BeauNewsHomeLink {
   font-size: calc(0.5em + 2.5vw);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
   padding: 2%;
+  background-color: #242424;
+  border-radius: 20px;
 }
 
 .container {
