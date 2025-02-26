@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Hosting files + instructions
+hostingInstructions.txt
+_redirects.txt
+# Local Netlify folder
+.netlify
