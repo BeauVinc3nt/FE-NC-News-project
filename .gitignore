@@ -25,6 +25,6 @@ dist-ssr
 
 # Hosting files + instructions
 hostingInstructions.txt
-_redirects.txt
+_redirects
 # Local Netlify folder
 .netlify
